@@ -11,15 +11,8 @@
 <body>
   <main>
     <h1>Vanilla JavaScript App</h1>
-    <p>Loading content from the API: <b id="name">...</b></p>
+    <p><a href="/login">Login with GitHub</a></p>
   </main>
-
-  <script>
-    (async function () {
-      const { text } = await (await fetch(`/api/message`)).json();
-      document.querySelector('#name').textContent = text;
-    }())
-  </script>
 </body>
 
 </html>
