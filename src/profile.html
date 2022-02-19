@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Vanilla JavaScript App - Profile</title>
+</head>
+
+<body>
+  <main>
+    <h1>Vanilla JavaScript App - Profile</h1>
+    <dl>
+      <dt>User name</dt>
+      <dd id="username">...</dd>
+      <dt>User ID</dt>
+      <dd id="userid">...</dd>
+      <dt>User roles</dt>
+      <dd id="userroles">...</dd>
+    </dl>
+    <p><a href="/">Top</a></p>
+  </main>
+
+  <script>
+    fetch('/.auth/me')
+      .then(response => response.json())
+      .then(json => {
+        console.log('success', json);
+
+        const principal = json.clientPrincipal;
+        document.getElementById('username').innerText = principal.userDetails;
+        document.getElementById('userid').innerText = principal.userId;
+        document.getElementById('userroles').innerText = principal.userRoles;
+      })
+      .catch(error => console.log('error', error));
+  </script>
+</body>
+
+</html>
