@@ -2,7 +2,7 @@
   "routes": [
     {
       "route": "/login",
-      "redirect": "/.auth/login/github"
+      "redirect": "/.auth/login/aad"
     },
     {
       "route": "/logout",
@@ -17,6 +17,17 @@
     "401": {
       "redirect": "/login",
       "statusCode": 302
+    }
+  },
+  "auth": {
+    "identityProviders": {
+      "azureActiveDirectory": {
+        "registration": {
+          "openIdIssuer": "https://login.microsoftonline.com/2a9b7f84-67b5-4bbe-beeb-e0a1df00cb77/v2.0",
+          "clientIdSettingName": "fd8c5244-4eaa-4222-83ab-b0465128a1dd",
+          "clientSecretSettingName": "A8r8Q~3wE2hovkFn_W.DBfcId6kAby6IN8ydSajh"
+        }
+      }
     }
   }
 }
