@@ -12,7 +12,7 @@
   "routes": [
     {
       "route": "/login",
-      "redirect": "/.auth/login/github?post_login_redirect_uri=https://polite-coast-0951acb00.5.azurestaticapps.net/.auth/login/github/callback"
+      "redirect": "/.auth/login/github?post_login_redirect_uri=.referrer"
     },
     {
       "route": "/logout",
