@@ -12,7 +12,7 @@
   "routes": [
     {
       "route": "/login",
-      "redirect": "/.auth/login/github?post_login_redirect_uri=.referrer"
+      "redirect": "/.auth/login/github"
     },
     {
       "route": "/logout",
