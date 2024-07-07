@@ -16,11 +16,15 @@
     },
     {
       "route": "/logout",
-      "redirect": "/.auth/logout?post_logout_redirect_uri=.referrer"
+      "redirect": "/.auth/logout"
     },
     {
       "route": "/profile.html",
       "allowedRoles": ["authenticated"]
+    },
+    {
+      "route": "/purge",
+      "redirect": "/.auth/purge/github"
     }
   ],
   "responseOverrides": {
