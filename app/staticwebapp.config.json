@@ -19,7 +19,8 @@
       "redirect": "/.auth/logout"
     },
     {
-      "route": "/profile.html",
+      "route": "/profile",
+      "redirect": "/profile.html",
       "allowedRoles": ["authenticated"]
     },
     {
