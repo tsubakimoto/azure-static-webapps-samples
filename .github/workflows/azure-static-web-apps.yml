@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths-ignore: 
+      - .github/workflows/super-linter.yml
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
